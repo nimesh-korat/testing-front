@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { React, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Login() {
 
     axios.defaults.withCredentials = true;
+    const navigate = useNavigate();
 
 
     //hook for Storing email & password
@@ -39,8 +40,8 @@ function Login() {
 
             //if success then navigate to home page
             if (success) {
-                // navigate('/');
-                window.location.reload(false);//for solving refresh issue
+                navigate('/');
+                // window.location.reload(false);//for solving refresh issue
             } else {
                 console.log(message);
                 alert(message);
