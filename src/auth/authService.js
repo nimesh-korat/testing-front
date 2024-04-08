@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const checkSession = async () => {
+    axios.defaults.withCredentials = true;
     try {
         console.log('Checking session');
         const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/session`, {}, {
