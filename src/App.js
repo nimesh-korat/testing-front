@@ -42,7 +42,7 @@ function App() {
     }
 
   }, []);
-
+  
   // Render routes only after loading is false and isAuthenticated is determined
   if (loading) {
     return <div>Loading...</div>;
