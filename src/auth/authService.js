@@ -4,7 +4,7 @@ const checkSession = async () => {
     axios.defaults.withCredentials = true;
     try {
         console.log('Checking session');
-        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/session`);
+        const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/session`);
         console.log(response);
         return true; // Session is valid
     } catch (error) {
