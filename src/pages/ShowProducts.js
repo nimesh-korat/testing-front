@@ -7,7 +7,7 @@ function ShowProducts() {
 
     useEffect(() => {
         axios
-            .post(`${process.env.REACT_APP_BACKEND_URL}/api/fetchAllProducts`)
+            .post(`${process.env.REACT_APP_BACKEND_URL}/fetchAllProducts`)
             .then((response) => {
                 setProducts(response.data.products);
             })
@@ -25,7 +25,7 @@ function ShowProducts() {
 
     async function logout() {
         await axios
-            .post(`${process.env.REACT_APP_BACKEND_URL}/api/logout`)
+            .post(`${process.env.REACT_APP_BACKEND_URL}/logout`)
             .then((response) => {
                 window.location.reload(false);
             });

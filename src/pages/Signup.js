@@ -68,7 +68,7 @@ function Signup() {
 
             console.log(data);
             //sending API for storing user data to MongoDB
-            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/signup`, data);
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/signup`, data);
             //const { success, message } = response.data;
             console.log("res success: ", response.data);
 
