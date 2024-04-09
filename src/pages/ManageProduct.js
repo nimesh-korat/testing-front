@@ -7,7 +7,7 @@ function ManageProduct() {
 
     function GetProducts() {
         axios
-            .post(`${process.env.REACT_APP_BACKEND_URL}/getProduct`)
+            .post(`${process.env.REACT_APP_BACKEND_URL}/api/getProduct`)
             .then((response) => {
                 setProducts(response.data.products);
             })
@@ -32,7 +32,7 @@ function ManageProduct() {
         console.log("pId: ", pId);
         //calling Login API
         try {
-            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/deleteProduct`, {
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/deleteProduct`, {
                 pId,
             });
 

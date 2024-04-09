@@ -61,7 +61,7 @@ function EditProduct() {
             }
 
             //sending API for storing user data to MongoDB
-            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/editProduct`, data);
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/editProduct`, data);
             //const { success, message } = response.data;
             console.log("res success: ", response.data);
 
