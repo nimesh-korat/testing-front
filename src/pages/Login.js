@@ -32,7 +32,7 @@ function Login() {
 
         //calling Login API
         try {
-            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/login`, loginData);
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, loginData);
 
             //initializing response data from API response
             const { userData, success, message } = response.data;
